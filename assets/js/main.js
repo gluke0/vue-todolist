@@ -46,7 +46,6 @@ createApp({
 
         erase(index){
             this.todos.splice(index, 1);
-            console.log(index);
         },
         
         completed(index){
@@ -55,6 +54,10 @@ createApp({
             } else {
                 this.todos[index].done = false;
             };
+        },
+
+        eraseAll(todos){
+            this.todos.splice(todos, todos.length)
         },
         
     }
