@@ -21,22 +21,22 @@
 
         <div class="container">
 
-            <h1 class="mt-5 mb-3 text-center"> Vue To Do List </h1>
+            <h1 class="mt-5 mb-3 text-center"> <strong>Vue To Do List </strong></h1>
 
             <div class="container w-70">
                 
                 <div class="input-group mb-3">
-                    <input @keyup.enter="newToDo" type="text" class="form-control" placeholder="aggiungi le cose da fare" v-model="newT">
+                    <input @keyup.enter="newToDo" type="text" class="form-control" placeholder="aggiungi un nuovo task" v-model="newT">
                     <button class="btn btn-outline-secondary" type="button" @click="newToDo">Aggiungi</button>
                 </div>
                  
                 <ol class="mx-auto list-group list-group-numbered">
-                    <li v-for="(toDo, index) in todos" class="list-group-item d-flex justify-content-between align-items-center">
+                    <li v-for="(toDo, index) in todos" class="list-group-item d-flex justify-content-between align-items-center" :class=" (index % 2 == 0) ? 'lightbg' : 'bg-white'">
                         <div @click="completed(index)" role="button" :class="{'text-decoration-line-through': todos[index].done}" class="ms-3 me-auto">
                             {{toDo.text}}
                         </div>
     
-                        <div @click="delete(index)" role="button">
+                        <div @click="erase(index)" role="button">
                             <i class="fa-solid fa-eraser"></i>
                         </div>
                     </li>

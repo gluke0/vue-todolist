@@ -44,8 +44,9 @@ createApp({
             }
         },
 
-        delete(index){
+        erase(index){
             this.todos.splice(index, 1);
+            console.log(index);
         },
         
         completed(index){
@@ -53,8 +54,8 @@ createApp({
                 this.todos[index].done = true;
             } else {
                 this.todos[index].done = false;
-            }
-            },
+            };
+        },
         
     }
 }).mount('#app')
