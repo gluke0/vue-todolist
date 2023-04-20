@@ -5,7 +5,7 @@ createApp({
         return {
 
             newT: '',
-            done: 'text-decoration-line-through',
+            doneCl: 'text-decoration-line-through',
 
             todos: [
                 {
@@ -58,6 +58,12 @@ createApp({
 
         eraseAll(todos){
             this.todos.splice(todos, todos.length)
+        },
+
+        eraseCompleted(index){
+            if(this.todos[index].done == true){
+                this.todos.splice(index, 1);
+            }
         },
         
     }

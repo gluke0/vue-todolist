@@ -16,3 +16,7 @@
 .fa-eraser:hover{
     transform: scale(1.1);
 }
+
+#btn-done{
+    width: 100%;
+}
