@@ -5,6 +5,7 @@ createApp({
         return {
 
             newT: '',
+            done: 'text-decoration-line-through',
 
             todos: [
                 {
@@ -47,7 +48,13 @@ createApp({
             this.todos.splice(index, 1);
         },
         
-
+        completed(index){
+            if(this.todos[index].done == false){
+                this.todos[index].done = true;
+            } else {
+                this.todos[index].done = false;
+            }
+            },
         
     }
 }).mount('#app')
