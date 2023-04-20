@@ -26,7 +26,7 @@
             <div class="container w-70">
                 
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="aggiungi le cose da fare" v-model="newT">
+                    <input @keyup.enter="newToDo" type="text" class="form-control" placeholder="aggiungi le cose da fare" v-model="newT">
                     <button class="btn btn-outline-secondary" type="button" @click="newToDo">Aggiungi</button>
                 </div>
                  

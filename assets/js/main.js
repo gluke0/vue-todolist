@@ -12,7 +12,7 @@ createApp({
                     done: false
                 },
                 {
-                    text: 'Fare la spesa',
+                    text: 'Fare benzina',
                     done: true
                 },
                 {
@@ -42,6 +42,7 @@ createApp({
                 this.newT = '';
             }
         },
+
         
     }
 }).mount('#app')
