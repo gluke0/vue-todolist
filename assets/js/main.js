@@ -34,7 +34,7 @@ createApp({
     methods:{
         newToDo(){
             if(this.newT.split() != ''){
-                const task = {
+                let task = {
                     text: this.newT,
                     done: false,
                 }
@@ -42,6 +42,11 @@ createApp({
                 this.newT = '';
             }
         },
+
+        delete(index){
+            this.todos.splice(index, 1);
+        },
+        
 
         
     }
