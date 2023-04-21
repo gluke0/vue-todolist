@@ -59,12 +59,6 @@ createApp({
         eraseAll(todos){
             this.todos.splice(todos, todos.length)
         },
-
-        eraseCompleted(index){
-            if(this.todos[index].done == true){
-                this.todos.splice(index, 1);
-            }
-        },
         
     }
 }).mount('#app')
